@@ -1,0 +1,5 @@
+<map id="G" name="G">
+<area shape="rect" id="node1" href="$classtweepy_1_1auth_1_1AuthHandler.html" title="tweepy::auth::AuthHandler" alt="" coords="7,32,196,61"/>
+<area shape="rect" id="node3" href="$classtweepy_1_1auth_1_1BasicAuthHandler.html" title="tweepy::auth::BasicAuthHandler" alt="" coords="247,5,471,35"/>
+<area shape="rect" id="node5" href="$classtweepy_1_1auth_1_1OAuthHandler.html" title="tweepy::auth::OAuthHandler" alt="" coords="259,59,459,88"/>
+</map>

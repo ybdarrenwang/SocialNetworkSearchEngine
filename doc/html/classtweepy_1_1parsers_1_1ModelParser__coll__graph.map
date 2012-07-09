@@ -1,0 +1,4 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$classtweepy_1_1parsers_1_1JSONParser.html" title="{tweepy::parsers::JSONParser\n|+ json_lib\l+ payload_format\l|+ __init__()\l+ parse()\l+ parse_error()\l}" alt="" coords="8,158,211,295"/>
+<area shape="rect" id="node4" href="$classtweepy_1_1parsers_1_1Parser.html" title="{tweepy::parsers::Parser\n||+ parse()\l+ parse_error()\l}" alt="" coords="24,6,195,109"/>
+</map>

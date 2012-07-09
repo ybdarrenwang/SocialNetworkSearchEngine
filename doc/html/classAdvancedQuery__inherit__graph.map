@@ -1,0 +1,4 @@
+<map id="G" name="G">
+<area shape="rect" id="node5" href="$classAutoCompleteAdvQ.html" title="{AutoCompleteAdvQ\n||+ AutoCompleteAdvQ()\l+ InitQuery()\l+ GetAutoCompleteList()\l+ GetAutoCompleteList()\l}" alt="" coords="5,465,189,602"/>
+<area shape="rect" id="node2" href="$classQuery.html" title="{Query\n|# receiver\l# keyword\l# person\l|+ Query()\l+ ~Query()\l+ InitQuery()\l+ Execute()\l+ SetKeyword()\l+ GetKeyword()\l+ SetPerson()\l+ GetPerson()\l}" alt="" coords="36,6,159,247"/>
+</map>

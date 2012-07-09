@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="node1" href="$classPost.html" title="Post" alt="" coords="5,59,56,88"/>
+<area shape="rect" id="node3" href="$classMessage.html" title="Message" alt="" coords="123,5,200,35"/>
+<area shape="rect" id="node5" href="$classPhoto.html" title="Photo" alt="" coords="132,59,191,88"/>
+<area shape="rect" id="node7" href="$classPostDecorator.html" title="PostDecorator" alt="" coords="104,112,219,141"/>
+<area shape="rect" id="node9" href="$classPlurkPuDecorator.html" title="PlurkPuDecorator" alt="" coords="281,32,415,61"/>
+<area shape="rect" id="node11" href="$classPlurkReplyDecorator.html" title="PlurkReplyDecorator" alt="" coords="273,85,423,115"/>
+<area shape="rect" id="node13" href="$classTwitterReplyDecorator.html" title="TwitterReplyDecorator" alt="" coords="269,139,427,168"/>
+<area shape="rect" id="node15" href="$classTwitterTweetDecorator.html" title="TwitterTweetDecorator" alt="" coords="268,192,428,221"/>
+</map>

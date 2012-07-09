@@ -1,0 +1,4 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$classPlurk_1_1oauth2_1_1SignatureMethod__HMAC__SHA1.html" title="{Plurk::oauth2::SignatureMethod_HMAC_SHA1\n|+ name\l|+ signing_base()\l+ sign()\l}" alt="" coords="5,174,317,277"/>
+<area shape="rect" id="node5" href="$classPlurk_1_1oauth2_1_1SignatureMethod__PLAINTEXT.html" title="{Plurk::oauth2::SignatureMethod_PLAINTEXT\n|+ name\l|+ signing_base()\l+ sign()\l}" alt="" coords="341,174,640,277"/>
+</map>

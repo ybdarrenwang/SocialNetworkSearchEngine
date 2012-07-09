@@ -1,0 +1,13 @@
+<map id="G" name="G">
+<area shape="rect" id="node1" href="$classtweepy_1_1models_1_1Model.html" title="tweepy::models::Model" alt="" coords="7,245,172,275"/>
+<area shape="rect" id="node3" href="$classtweepy_1_1models_1_1DirectMessage.html" title="tweepy::models::DirectMessage" alt="" coords="221,5,445,35"/>
+<area shape="rect" id="node5" href="$classtweepy_1_1models_1_1Friendship.html" title="tweepy::models::Friendship" alt="" coords="237,59,429,88"/>
+<area shape="rect" id="node7" href="$classtweepy_1_1models_1_1IDModel.html" title="tweepy::models::IDModel" alt="" coords="244,112,423,141"/>
+<area shape="rect" id="node9" href="$classtweepy_1_1models_1_1JSONModel.html" title="tweepy::models::JSONModel" alt="" coords="235,165,432,195"/>
+<area shape="rect" id="node11" href="$classtweepy_1_1models_1_1List.html" title="tweepy::models::List" alt="" coords="259,219,408,248"/>
+<area shape="rect" id="node13" href="$classtweepy_1_1models_1_1Relation.html" title="tweepy::models::Relation" alt="" coords="244,272,423,301"/>
+<area shape="rect" id="node15" href="$classtweepy_1_1models_1_1SavedSearch.html" title="tweepy::models::SavedSearch" alt="" coords="227,325,440,355"/>
+<area shape="rect" id="node17" href="$classtweepy_1_1models_1_1SearchResult.html" title="tweepy::models::SearchResult" alt="" coords="228,379,439,408"/>
+<area shape="rect" id="node19" href="$classtweepy_1_1models_1_1Status.html" title="tweepy::models::Status" alt="" coords="248,432,419,461"/>
+<area shape="rect" id="node21" href="$classtweepy_1_1models_1_1User.html" title="tweepy::models::User" alt="" coords="255,485,412,515"/>
+</map>

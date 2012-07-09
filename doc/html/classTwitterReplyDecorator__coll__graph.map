@@ -1,0 +1,4 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$classPostDecorator.html" title="{PostDecorator\n|&#45; post\l|+ PostDecorator()\l+ ~PostDecorator()\l+ PrintContent()\l+ PrintOption()\l+ ExecuteOption()\l+ SetPrevPost()\l+ SetNextPost()\l}" alt="" coords="23,331,172,520"/>
+<area shape="rect" id="node4" href="$classPost.html" title="{Post\n|# prevPost\l# nextPost\l# id\l|+ Post()\l+ ~Post()\l+ PrintContent()\l+ PrintOption()\l+ ExecuteOption()\l+ SetPrevPost()\l+ SetNextPost()\l+ GetID()\l+ SetID()\l}" alt="" coords="28,5,167,264"/>
+</map>

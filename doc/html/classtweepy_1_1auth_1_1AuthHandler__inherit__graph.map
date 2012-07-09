@@ -1,0 +1,4 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$classtweepy_1_1auth_1_1BasicAuthHandler.html" title="{tweepy::auth::BasicAuthHandler\n|+ username\l&#45; _b64up\l|+ __init__()\l+ apply_auth()\l+ get_username()\l}" alt="" coords="5,279,229,417"/>
+<area shape="rect" id="node5" href="$classtweepy_1_1auth_1_1OAuthHandler.html" title="{tweepy::auth::OAuthHandler\n|+ request_token\l+ access_token\l+ callback\l+ username\l+ secure\l+ OAUTH_HOST\l+ OAUTH_ROOT\l&#45; _consumer\l&#45; _sigmethod\l|+ __init__()\l+ apply_auth()\l+ set_request_token()\l+ set_access_token()\l+ get_authorization_url()\l+ get_access_token()\l+ get_xauth_access_token()\l+ get_username()\l&#45; _get_oauth_url()\l&#45; _get_request_token()\l}" alt="" coords="253,158,459,538"/>
+</map>

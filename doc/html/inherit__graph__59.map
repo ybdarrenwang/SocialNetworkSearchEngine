@@ -1,0 +1,5 @@
+<map id="G" name="G">
+<area shape="rect" id="node1" href="$classtweepy_1_1oauth_1_1OAuthSignatureMethod.html" title="tweepy::oauth::OAuthSignatureMethod" alt="" coords="5,32,275,61"/>
+<area shape="rect" id="node3" href="$classtweepy_1_1oauth_1_1OAuthSignatureMethod__HMAC__SHA1.html" title="tweepy::oauth::OAuthSignatureMethod_HMAC_SHA1" alt="" coords="324,5,681,35"/>
+<area shape="rect" id="node5" href="$classtweepy_1_1oauth_1_1OAuthSignatureMethod__PLAINTEXT.html" title="tweepy::oauth::OAuthSignatureMethod_PLAINTEXT" alt="" coords="332,59,673,88"/>
+</map>

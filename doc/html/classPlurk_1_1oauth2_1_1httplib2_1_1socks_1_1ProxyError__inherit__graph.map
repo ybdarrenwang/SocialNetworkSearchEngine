@@ -1,0 +1,7 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$classPlurk_1_1oauth2_1_1httplib2_1_1socks_1_1GeneralProxyError.html" title="{Plurk::oauth2::httplib2::socks::GeneralProxyError\n||}" alt="" coords="5,139,336,224"/>
+<area shape="rect" id="node5" href="$classPlurk_1_1oauth2_1_1httplib2_1_1socks_1_1HTTPError.html" title="{Plurk::oauth2::httplib2::socks::HTTPError\n||}" alt="" coords="360,139,637,224"/>
+<area shape="rect" id="node7" href="$classPlurk_1_1oauth2_1_1httplib2_1_1socks_1_1Socks4Error.html" title="{Plurk::oauth2::httplib2::socks::Socks4Error\n||}" alt="" coords="661,139,952,224"/>
+<area shape="rect" id="node9" href="$classPlurk_1_1oauth2_1_1httplib2_1_1socks_1_1Socks5AuthError.html" title="{Plurk::oauth2::httplib2::socks::Socks5AuthError\n||}" alt="" coords="976,139,1296,224"/>
+<area shape="rect" id="node11" href="$classPlurk_1_1oauth2_1_1httplib2_1_1socks_1_1Socks5Error.html" title="{Plurk::oauth2::httplib2::socks::Socks5Error\n||}" alt="" coords="1320,139,1611,224"/>
+</map>

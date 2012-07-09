@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node1" href="$classPlurk_1_1oauth2_1_1httplib2_1_1Authentication.html" title="Plurk::oauth2::httplib2::Authentication" alt="" coords="7,112,268,141"/>
+<area shape="rect" id="node3" href="$classPlurk_1_1oauth2_1_1httplib2_1_1BasicAuthentication.html" title="Plurk::oauth2::httplib2::BasicAuthentication" alt="" coords="341,5,637,35"/>
+<area shape="rect" id="node5" href="$classPlurk_1_1oauth2_1_1httplib2_1_1DigestAuthentication.html" title="Plurk::oauth2::httplib2::DigestAuthentication" alt="" coords="337,59,641,88"/>
+<area shape="rect" id="node7" href="$classPlurk_1_1oauth2_1_1httplib2_1_1GoogleLoginAuthentication.html" title="Plurk::oauth2::httplib2::GoogleLoginAuthentication" alt="" coords="319,112,660,141"/>
+<area shape="rect" id="node9" href="$classPlurk_1_1oauth2_1_1httplib2_1_1HmacDigestAuthentication.html" title="Plurk::oauth2::httplib2::HmacDigestAuthentication" alt="" coords="319,165,660,195"/>
+<area shape="rect" id="node11" href="$classPlurk_1_1oauth2_1_1httplib2_1_1WsseAuthentication.html" title="Plurk::oauth2::httplib2::WsseAuthentication" alt="" coords="341,219,637,248"/>
+</map>

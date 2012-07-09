@@ -1,0 +1,5 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$classBasicQuery.html" title="{BasicQuery\n||+ BasicQuery()\l+ Execute()\l+ InitQuery()\l}" alt="" coords="39,589,156,709"/>
+<area shape="rect" id="node4" href="$classQuery.html" title="{Query\n|# receiver\l# keyword\l# person\l|+ Query()\l+ ~Query()\l+ InitQuery()\l+ Execute()\l+ SetKeyword()\l+ GetKeyword()\l+ SetPerson()\l+ GetPerson()\l}" alt="" coords="36,297,159,538"/>
+<area shape="rect" id="node6" href="$classSocialNet.html" title="{SocialNet\n|&#45; instance\l&#45; socialNetManager\l|+ ~SocialNet()\l+ Clone()\l+ Login()\l+ BasicSearch()\l+ AdvancedSearch()\l+ Instance()\l# SocialNet()\l# newSocialNet()\l}" alt="" coords="20,5,175,229"/>
+</map>

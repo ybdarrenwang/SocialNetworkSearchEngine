@@ -1,0 +1,4 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$classPost.html" title="{Post\n|# prevPost\l# nextPost\l# id\l|+ Post()\l+ ~Post()\l+ PrintContent()\l+ PrintOption()\l+ ExecuteOption()\l+ SetPrevPost()\l+ SetNextPost()\l+ GetID()\l+ SetID()\l}" alt="" coords="5,92,144,351"/>
+<area shape="rect" id="node5" href="$classTime.html" title="{Time\n|&#45; year\l&#45; month\l&#45; day\l&#45; weektime\l&#45; hour\l&#45; minute\l&#45; second\l|+ ~Time()\l+ SetYear()\l+ GetYear()\l+ SetMonth()\l+ GetMonth()\l+ SetDay()\l+ GetDay()\l+ SetWeektime()\l+ GetWeektime()\l+ SetHour()\l+ GetHour()\l+ SetMinute()\l+ GetMinute()\l+ SetSecond()\l+ GetSecond()\l}" alt="" coords="249,5,380,437"/>
+</map>

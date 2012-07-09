@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$classAdvancedQuery.html" title="{AdvancedQuery\n||+ AdvancedQuery()\l+ Execute()\l+ InitQuery()\l}" alt="" coords="37,296,184,416"/>
+<area shape="rect" id="node7" href="$classBasicQuery.html" title="{BasicQuery\n||+ BasicQuery()\l+ Execute()\l+ InitQuery()\l}" alt="" coords="233,296,351,416"/>
+<area shape="rect" id="node5" href="$classAutoCompleteAdvQ.html" title="{AutoCompleteAdvQ\n||+ AutoCompleteAdvQ()\l+ InitQuery()\l+ GetAutoCompleteList()\l+ GetAutoCompleteList()\l}" alt="" coords="5,465,189,602"/>
+<area shape="rect" id="node9" href="$classAutoCompleteBasicQ.html" title="{AutoCompleteBasicQ\n||+ AutoCompleteBasicQ()\l+ InitQuery()\l+ GetAutoCompleteList()\l}" alt="" coords="213,473,397,593"/>
+</map>
