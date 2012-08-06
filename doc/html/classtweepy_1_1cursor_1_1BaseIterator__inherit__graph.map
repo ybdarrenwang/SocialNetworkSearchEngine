@@ -1,5 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node3" href="$classtweepy_1_1cursor_1_1CursorIterator.html" title="{tweepy::cursor::CursorIterator\n|+ next_cursor\l+ prev_cursor\l+ count\l|+ __init__()\l+ next()\l+ prev()\l}" alt="" coords="5,260,216,415"/>
-<area shape="rect" id="node5" href="$classtweepy_1_1cursor_1_1ItemIterator.html" title="{tweepy::cursor::ItemIterator\n|+ page_iterator\l+ limit\l+ current_page\l+ page_index\l+ count\l|+ __init__()\l+ next()\l+ prev()\l}" alt="" coords="240,243,437,432"/>
-<area shape="rect" id="node7" href="$classtweepy_1_1cursor_1_1PageIterator.html" title="{tweepy::cursor::PageIterator\n|+ current_page\l|+ __init__()\l+ next()\l+ prev()\l}" alt="" coords="461,277,661,397"/>
-</map>

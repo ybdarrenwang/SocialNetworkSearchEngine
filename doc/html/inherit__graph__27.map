@@ -1,8 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node1" href="$classPlurk_1_1oauth2_1_1httplib2_1_1socks_1_1ProxyError.html" title="Plurk::oauth2::httplib2::socks::ProxyError" alt="" coords="5,112,285,141"/>
-<area shape="rect" id="node3" href="$classPlurk_1_1oauth2_1_1httplib2_1_1socks_1_1GeneralProxyError.html" title="Plurk::oauth2::httplib2::socks::GeneralProxyError" alt="" coords="333,5,664,35"/>
-<area shape="rect" id="node5" href="$classPlurk_1_1oauth2_1_1httplib2_1_1socks_1_1HTTPError.html" title="Plurk::oauth2::httplib2::socks::HTTPError" alt="" coords="360,59,637,88"/>
-<area shape="rect" id="node7" href="$classPlurk_1_1oauth2_1_1httplib2_1_1socks_1_1Socks4Error.html" title="Plurk::oauth2::httplib2::socks::Socks4Error" alt="" coords="353,112,644,141"/>
-<area shape="rect" id="node9" href="$classPlurk_1_1oauth2_1_1httplib2_1_1socks_1_1Socks5AuthError.html" title="Plurk::oauth2::httplib2::socks::Socks5AuthError" alt="" coords="339,165,659,195"/>
-<area shape="rect" id="node11" href="$classPlurk_1_1oauth2_1_1httplib2_1_1socks_1_1Socks5Error.html" title="Plurk::oauth2::httplib2::socks::Socks5Error" alt="" coords="353,219,644,248"/>
-</map>

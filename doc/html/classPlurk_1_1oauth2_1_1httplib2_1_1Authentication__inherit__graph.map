@@ -1,7 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node3" href="$classPlurk_1_1oauth2_1_1httplib2_1_1BasicAuthentication.html" title="{Plurk::oauth2::httplib2::BasicAuthentication\n||+ __init__()\l+ request()\l}" alt="" coords="5,305,301,407"/>
-<area shape="rect" id="node5" href="$classPlurk_1_1oauth2_1_1httplib2_1_1DigestAuthentication.html" title="{Plurk::oauth2::httplib2::DigestAuthentication\n|+ challenge\l+ A1\l|+ __init__()\l+ request()\l+ response()\l}" alt="" coords="325,287,629,425"/>
-<area shape="rect" id="node7" href="$classPlurk_1_1oauth2_1_1httplib2_1_1GoogleLoginAuthentication.html" title="{Plurk::oauth2::httplib2::GoogleLoginAuthentication\n|+ Auth\l|+ __init__()\l+ request()\l}" alt="" coords="653,305,995,407"/>
-<area shape="rect" id="node9" href="$classPlurk_1_1oauth2_1_1httplib2_1_1HmacDigestAuthentication.html" title="{Plurk::oauth2::httplib2::HmacDigestAuthentication\n|+ challenge\l+ hashmod\l+ pwhashmod\l+ key\l&#45; __author__\l|+ __init__()\l+ request()\l+ response()\l}" alt="" coords="1019,261,1360,451"/>
-<area shape="rect" id="node11" href="$classPlurk_1_1oauth2_1_1httplib2_1_1WsseAuthentication.html" title="{Plurk::oauth2::httplib2::WsseAuthentication\n||+ __init__()\l+ request()\l}" alt="" coords="1384,305,1680,407"/>
-</map>

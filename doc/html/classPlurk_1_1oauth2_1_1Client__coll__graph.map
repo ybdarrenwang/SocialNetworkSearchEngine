@@ -1,3 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node2" href="$classPlurk_1_1oauth2_1_1httplib2_1_1Http.html" title="{Plurk::oauth2::httplib2::Http\n|+ proxy_info\l+ ca_certs\l+ disable_ssl_certificate_validation\l+ connections\l+ cache\l+ credentials\l+ certificates\l+ authorizations\l+ follow_redirects\l+ optimistic_concurrency_methods\l+ follow_all_redirects\l+ ignore_etag\l+ force_exception_to_status_code\l+ timeout\l|+ __init__()\l+ add_credentials()\l+ add_certificate()\l+ clear_credentials()\l+ request()\l&#45; _auth_from_challenge()\l&#45; _conn_request()\l&#45; _request()\l&#45; _normalize_headers()\l&#45; _get_proxy_info()\l}" alt="" coords="5,5,253,472"/>
-</map>

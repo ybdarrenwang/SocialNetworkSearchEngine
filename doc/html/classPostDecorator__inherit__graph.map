@@ -1,7 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node5" href="$classPlurkPuDecorator.html" title="{PlurkPuDecorator\n||+ PlurkPuDecorator()\l+ PrintContent()\l+ PrintOption()\l+ ExecuteOption()\l}" alt="" coords="5,550,163,687"/>
-<area shape="rect" id="node7" href="$classPlurkReplyDecorator.html" title="{PlurkReplyDecorator\n||+ PlurkReplyDecorator()\l+ PrintContent()\l+ PrintOption()\l+ ExecuteOption()\l}" alt="" coords="187,550,360,687"/>
-<area shape="rect" id="node9" href="$classTwitterReplyDecorator.html" title="{TwitterReplyDecorator\n||+ TwitterReplyDecorator()\l+ PrintContent()\l+ PrintOption()\l+ ExecuteOption()\l}" alt="" coords="384,550,568,687"/>
-<area shape="rect" id="node11" href="$classTwitterTweetDecorator.html" title="{TwitterTweetDecorator\n||+ TwitterTweetDecorator()\l+ PrintContent()\l+ PrintOption()\l+ ExecuteOption()\l}" alt="" coords="592,550,779,687"/>
-<area shape="rect" id="node2" href="$classPost.html" title="{Post\n|# prevPost\l# nextPost\l# id\l|+ Post()\l+ ~Post()\l+ PrintContent()\l+ PrintOption()\l+ ExecuteOption()\l+ SetPrevPost()\l+ SetNextPost()\l+ GetID()\l+ SetID()\l}" alt="" coords="305,5,444,264"/>
-</map>

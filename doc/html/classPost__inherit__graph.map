@@ -1,9 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node3" href="$classMessage.html" title="{Message\n|&#45; author\l&#45; createTime\l&#45; updateTime\l&#45; content\l&#45; link\l|+ ~Message()\l+ PrintContent()\l+ PrintOption()\l+ ExecuteOption()\l+ SetPrevPost()\l+ SetNextPost()\l+ SetMessage()\l}" alt="" coords="5,312,144,571"/>
-<area shape="rect" id="node5" href="$classPhoto.html" title="{Photo\n|&#45; author\l&#45; createTime\l&#45; updateTime\l&#45; content\l&#45; link\l|+ ~Photo()\l+ PrintContent()\l+ PrintOption()\l+ ExecuteOption()\l+ SetPrevPost()\l+ SetNextPost()\l}" alt="" coords="168,321,307,562"/>
-<area shape="rect" id="node7" href="$classPostDecorator.html" title="{PostDecorator\n|&#45; post\l|+ PostDecorator()\l+ ~PostDecorator()\l+ PrintContent()\l+ PrintOption()\l+ ExecuteOption()\l+ SetPrevPost()\l+ SetNextPost()\l}" alt="" coords="331,347,480,536"/>
-<area shape="rect" id="node9" href="$classPlurkPuDecorator.html" title="{PlurkPuDecorator\n||+ PlurkPuDecorator()\l+ PrintContent()\l+ PrintOption()\l+ ExecuteOption()\l}" alt="" coords="36,619,193,757"/>
-<area shape="rect" id="node11" href="$classPlurkReplyDecorator.html" title="{PlurkReplyDecorator\n||+ PlurkReplyDecorator()\l+ PrintContent()\l+ PrintOption()\l+ ExecuteOption()\l}" alt="" coords="217,619,391,757"/>
-<area shape="rect" id="node13" href="$classTwitterReplyDecorator.html" title="{TwitterReplyDecorator\n||+ TwitterReplyDecorator()\l+ PrintContent()\l+ PrintOption()\l+ ExecuteOption()\l}" alt="" coords="415,619,599,757"/>
-<area shape="rect" id="node15" href="$classTwitterTweetDecorator.html" title="{TwitterTweetDecorator\n||+ TwitterTweetDecorator()\l+ PrintContent()\l+ PrintOption()\l+ ExecuteOption()\l}" alt="" coords="623,619,809,757"/>
-</map>

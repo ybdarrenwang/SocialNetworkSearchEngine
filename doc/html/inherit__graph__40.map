@@ -1,7 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node1" href="$classQuery.html" title="Query" alt="" coords="7,32,65,61"/>
-<area shape="rect" id="node3" href="$classAdvancedQuery.html" title="AdvancedQuery" alt="" coords="115,5,237,35"/>
-<area shape="rect" id="node7" href="$classBasicQuery.html" title="BasicQuery" alt="" coords="129,59,223,88"/>
-<area shape="rect" id="node5" href="$classAutoCompleteAdvQ.html" title="AutoCompleteAdvQ" alt="" coords="292,5,439,35"/>
-<area shape="rect" id="node9" href="$classAutoCompleteBasicQ.html" title="AutoCompleteBasicQ" alt="" coords="287,59,444,88"/>
-</map>

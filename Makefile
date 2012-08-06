@@ -1,12 +1,25 @@
-GplusplusFlag = -Wall
-objects = main.o SocialNet.o User.o Message.o Photo.o PlurkPuDecorator.o PlurkReplyDecorator.o TwitterReplyDecorator.o TwitterTweetDecorator.o json.o Plurk.o Twitter.o AutoCompleteBasicQ.o AutoCompleteAdvQ.o
+GPP = g++
+GPPFlag = -O2 -Wall
+
+SRC = src
+BUILD = build
+DOC = doc
+DOXYGEN = doxygen
+DOXYGENCFG = doxygen.cfg
+
+objects = $(BUILD)/main.o $(BUILD)/SocialNet.o $(BUILD)/User.o $(BUILD)/Message.o $(BUILD)/Photo.o $(BUILD)/PlurkPuDecorator.o $(BUILD)/PlurkReplyDecorator.o $(BUILD)/TwitterReplyDecorator.o $(BUILD)/TwitterTweetDecorator.o $(BUILD)/json.o $(BUILD)/Plurk.o $(BUILD)/Twitter.o $(BUILD)/AutoCompleteBasicQ.o $(BUILD)/AutoCompleteAdvQ.o
 
 all: $(objects)
-	g++ $(GplusplusFlag) -o SocialNetworkSearchEngine $^
+	mkdir -p $(BUILD);
+	$(GPP) $(GPPFlag) -o SocialNetworkSearchEngine.exe $^
 
-%.o: %.cpp
+$(BUILD)/%.o: $(SRC)/%.cpp
 	g++ -c -o $@ $<
 
+.PHONY : doc
+doc:
+	cd $(DOC); $(DOXYGEN) $(DOXYGENCFG)
+
 .PHONY : clean
-clean :
-	rm $(objects)
+clean:
+	rm -r $(BUILD)

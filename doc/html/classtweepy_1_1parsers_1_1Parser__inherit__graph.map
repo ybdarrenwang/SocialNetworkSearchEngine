@@ -1,5 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node3" href="$classtweepy_1_1parsers_1_1JSONParser.html" title="{tweepy::parsers::JSONParser\n|+ json_lib\l+ payload_format\l|+ __init__()\l+ parse()\l+ parse_error()\l}" alt="" coords="8,158,211,295"/>
-<area shape="rect" id="node7" href="$classtweepy_1_1parsers_1_1RawParser.html" title="{tweepy::parsers::RawParser\n||+ __init__()\l+ parse()\l+ parse_error()\l}" alt="" coords="235,167,429,287"/>
-<area shape="rect" id="node5" href="$classtweepy_1_1parsers_1_1ModelParser.html" title="{tweepy::parsers::ModelParser\n|+ model_factory\l|+ __init__()\l+ parse()\l}" alt="" coords="5,345,213,447"/>
-</map>

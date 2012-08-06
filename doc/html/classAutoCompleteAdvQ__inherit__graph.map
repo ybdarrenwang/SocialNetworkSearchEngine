@@ -1,4 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node2" href="$classAdvancedQuery.html" title="{AdvancedQuery\n||+ AdvancedQuery()\l+ Execute()\l+ InitQuery()\l}" alt="" coords="24,296,171,416"/>
-<area shape="rect" id="node4" href="$classQuery.html" title="{Query\n|# receiver\l# keyword\l# person\l|+ Query()\l+ ~Query()\l+ InitQuery()\l+ Execute()\l+ SetKeyword()\l+ GetKeyword()\l+ SetPerson()\l+ GetPerson()\l}" alt="" coords="36,6,159,247"/>
-</map>

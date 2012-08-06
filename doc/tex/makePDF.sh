@@ -1,0 +1,2 @@
+xelatex finalProj
+xelatex finalProj

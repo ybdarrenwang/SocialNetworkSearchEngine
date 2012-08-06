@@ -1,7 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node1" href="$classtweepy_1_1cache_1_1Cache.html" title="tweepy::cache::Cache" alt="" coords="5,85,165,115"/>
-<area shape="rect" id="node3" href="$classtweepy_1_1cache_1_1FileCache.html" title="tweepy::cache::FileCache" alt="" coords="240,5,419,35"/>
-<area shape="rect" id="node5" href="$classtweepy_1_1cache_1_1MemCacheCache.html" title="tweepy::cache::MemCacheCache" alt="" coords="213,59,445,88"/>
-<area shape="rect" id="node7" href="$classtweepy_1_1cache_1_1MemoryCache.html" title="tweepy::cache::MemoryCache" alt="" coords="224,112,435,141"/>
-<area shape="rect" id="node9" href="$classtweepy_1_1cache_1_1RedisCache.html" title="tweepy::cache::RedisCache" alt="" coords="233,165,425,195"/>
-</map>
