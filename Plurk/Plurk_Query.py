@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import sys
+import os
 sys.path.append('plurk_oauth/')
 from PlurkAPI import PlurkAPI
 import getopt
@@ -26,45 +27,53 @@ def usage():
     -h: Show help information
     '''
 def Plurk_Login(user_name):
-    file = open('API_all.keys', 'r+')
-    all_data = json.load(file)
-    file.close()
-    consumer_key = "8GR4shW16mNX"
-    consumer_secret = "2DSFSK5vHEva2LsxjDYaKpISu2pYCjNy"
-    plurk = PlurkAPI(consumer_key, consumer_secret)
+	if (os.path.isfile('API_plurk_all.keys')):
+	    file = open('API_plurk_all.keys', 'r+')
+	    all_data = json.load(file)
+	    file.close()
+	else:
+		all_data = {}
 
-    if all_data.get(user_name):
-        data = all_data[user_name]
-    else:
-        plurk.authorize()
-        data = {}
-        data["ACCESS_TOKEN"] = plurk._oauth.oauth_token['oauth_token']
-        data["ACCESS_TOKEN_SECRET"] = plurk._oauth.oauth_token['oauth_token_secret']
-        all_data[user_name] = data
-        file = open('API_all.keys', 'w')
-        json.dump(all_data, file)
-        file.close()
+	consumer_key = "8GR4shW16mNX"
+	consumer_secret = "2DSFSK5vHEva2LsxjDYaKpISu2pYCjNy"
+	plurk = PlurkAPI(consumer_key, consumer_secret)
 
-    file = open('API.keys','w')
-    json.dump(data,file)
-    file.close()
-    plurk.authorize(data["ACCESS_TOKEN"],data["ACCESS_TOKEN_SECRET"])
-    return plurk
+	if all_data.get(user_name):
+		data = all_data[user_name]
+	else:
+		plurk.authorize()
+		data = {}
+		data["ACCESS_TOKEN"] = plurk._oauth.oauth_token['oauth_token']
+		data["ACCESS_TOKEN_SECRET"] = plurk._oauth.oauth_token['oauth_token_secret']
+		all_data[user_name] = data
+		file = open('API_plurk_all.keys', 'w')
+		json.dump(all_data, file)
+		file.close()
+
+	file = open('API_plurk.keys','w')
+	json.dump(data,file)
+	file.close()
+	plurk.authorize(data["ACCESS_TOKEN"],data["ACCESS_TOKEN_SECRET"])
+	return plurk
        
 def Plurk_Log():
-    file = open('API.keys', 'r+')
-    data = json.load(file)
-    consumer_key = "8GR4shW16mNX"
-    consumer_secret = "2DSFSK5vHEva2LsxjDYaKpISu2pYCjNy"
-    plurk = PlurkAPI(consumer_key, consumer_secret)
-    if data.get('ACCESS_TOKEN'):
-        plurk.authorize(data["ACCESS_TOKEN"],data["ACCESS_TOKEN_SECRET"])
-    else:
-        plurk.authorize()
-        data["ACCESS_TOKEN"] = plurk._oauth.oauth_token['oauth_token']
-        data["ACCESS_TOKEN_SECRET"] = plurk._oauth.oauth_token['oauth_token_secret']
-    file.close()
-    return plurk
+	if (os.path.isfile('API_plurk.keys')):
+		file = open('API_plurk.keys', 'r+')
+		data = json.load(file)
+	else:
+		file = open('API_plurk.keys', 'w')
+		data = {}
+	consumer_key = "8GR4shW16mNX"
+	consumer_secret = "2DSFSK5vHEva2LsxjDYaKpISu2pYCjNy"
+	plurk = PlurkAPI(consumer_key, consumer_secret)
+	if data.get('ACCESS_TOKEN'):
+		plurk.authorize(data["ACCESS_TOKEN"],data["ACCESS_TOKEN_SECRET"])
+	else:
+		plurk.authorize()
+		data["ACCESS_TOKEN"] = plurk._oauth.oauth_token['oauth_token']
+		data["ACCESS_TOKEN_SECRET"] = plurk._oauth.oauth_token['oauth_token_secret']
+	file.close()
+	return plurk
 
 def ParseTime(d):
     date = d.split()

@@ -1,51 +1,61 @@
 # -*- coding: utf-8 -*-
 import tweepy
 import sys
+import os
 import json
 
 
 def Twitter_Login(user_name):
-    file = open('API_twitter_all.keys', 'r+')
-    all_data = json.load(file)
-    file.close()
-    consumer_key="2YIdiuX1g8GyCGu0bkl2w"
-    consumer_secret="NQm7aC0R7yYNyIgIGp9YkVl5whgqLr7yhNM7n13sCso"
-    auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
-    
-    if all_data.get(user_name):
-        data = all_data[user_name]
-    else:
-        print auth.get_authorization_url()
-        verification_num = input("Please input the verification number: ")
-        auth.get_access_token( verification_num )
-        data = {}
-        data["ACCESS_TOKEN"] = auth.access_token.key
-        data["ACCESS_TOKEN_SECRET"] = auth.access_token.secret
-        all_data[user_name] = data
-        file = open('API_twitter_all.keys', 'w')
-        json.dump(all_data, file)
-        file.close()
+	if (os.path.isfile('API_twitter_all.keys')):
+		file = open('API_twitter_all.keys', 'r+')
+		all_data = json.load(file)
+		file.close()
+	else:
+		all_data = {}
 
-    file = open('API_twitter.keys','w')
-    json.dump(data,file)
-    file.close()
-    auth.set_access_token(data["ACCESS_TOKEN"], data["ACCESS_TOKEN_SECRET"])
-    api = tweepy.API(auth)
-    return api
+	consumer_key="2YIdiuX1g8GyCGu0bkl2w"
+	consumer_secret="NQm7aC0R7yYNyIgIGp9YkVl5whgqLr7yhNM7n13sCso"
+	auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
+    
+	if all_data.get(user_name):
+		data = all_data[user_name]
+	else:
+		print auth.get_authorization_url()
+		verification_num = input("Please input the verification number: ")
+		auth.get_access_token( verification_num )
+		data = {}
+		data["ACCESS_TOKEN"] = auth.access_token.key
+		data["ACCESS_TOKEN_SECRET"] = auth.access_token.secret
+		all_data[user_name] = data
+		file = open('API_twitter_all.keys', 'w')
+		json.dump(all_data, file)
+		file.close()
+
+	file = open('API_twitter.keys','w')
+	json.dump(data,file)
+	file.close()
+	auth.set_access_token(data["ACCESS_TOKEN"], data["ACCESS_TOKEN_SECRET"])
+	api = tweepy.API(auth)
+	return api
        
 def Twitter_Log():
-    file = open('API_twitter.keys', 'r+')
-    data = json.load(file)
-    consumer_key="2YIdiuX1g8GyCGu0bkl2w"
-    consumer_secret="NQm7aC0R7yYNyIgIGp9YkVl5whgqLr7yhNM7n13sCso"
+	if (os.path.isfile('API_twitter.keys')):
+		file = open('API_twitter.keys', 'r+')
+		data = json.load(file)
+	else:
+		file = open('API_twitter.keys', 'w')
+		data = {}
 
-    auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
+	consumer_key="2YIdiuX1g8GyCGu0bkl2w"
+	consumer_secret="NQm7aC0R7yYNyIgIGp9YkVl5whgqLr7yhNM7n13sCso"
 
-    if data.get('ACCESS_TOKEN'):
-        auth.set_access_token(data["ACCESS_TOKEN"], data["ACCESS_TOKEN_SECRET"])
-    file.close()
-    api = tweepy.API(auth) 
-    return api
+	auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
+
+	if data.get('ACCESS_TOKEN'):
+		auth.set_access_token(data["ACCESS_TOKEN"], data["ACCESS_TOKEN_SECRET"])
+	file.close()
+	api = tweepy.API(auth) 
+	return api
 
 def GetTime(date):
     Time = {}
