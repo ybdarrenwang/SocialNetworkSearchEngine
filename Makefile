@@ -5,20 +5,19 @@ SRC = src
 BUILD = build
 DOC = doc
 DOXYGEN = doxygen
-DOXYGENCFG = doxygen.cfg
+DOXYGENCFG = $(DOC)/doxygen.cfg
 
 CDIR = cd
 MKDIR = mkdir -p
-RMDIR = rm -r
+RM = rm
 
 objects = $(BUILD)/main.o $(BUILD)/SocialNet.o $(BUILD)/User.o $(BUILD)/Message.o $(BUILD)/Photo.o $(BUILD)/PlurkPuDecorator.o $(BUILD)/PlurkReplyDecorator.o $(BUILD)/TwitterReplyDecorator.o $(BUILD)/TwitterTweetDecorator.o $(BUILD)/json.o $(BUILD)/Plurk.o $(BUILD)/Twitter.o $(BUILD)/AutoCompleteBasicQ.o $(BUILD)/AutoCompleteAdvQ.o
 
 all: $(objects)
-	$(MKDIR) $(BUILD);
 	$(GPP) $(GPPFlag) -o SocialNetworkSearchEngine.exe $^
 
 $(BUILD)/%.o: $(SRC)/%.cpp
-	g++ -c -o $@ $<
+	$(GPP) -c -o $@ $<
 
 .PHONY : doc
 doc:
@@ -27,4 +26,4 @@ doc:
 
 .PHONY : clean
 clean:
-	$(RMDIR) $(BUILD)
+	$(RM) $(BUILD)/*
