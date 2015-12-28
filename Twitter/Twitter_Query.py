@@ -15,7 +15,7 @@ def Twitter_Login(user_name):
 
 	consumer_key="2YIdiuX1g8GyCGu0bkl2w"
 	consumer_secret="NQm7aC0R7yYNyIgIGp9YkVl5whgqLr7yhNM7n13sCso"
-	auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
+	auth = tweepy.OAuthHandler(consumer_key, consumer_secret, secure=True)
     
 	if all_data.get(user_name):
 		data = all_data[user_name]
@@ -49,7 +49,7 @@ def Twitter_Log():
 	consumer_key="2YIdiuX1g8GyCGu0bkl2w"
 	consumer_secret="NQm7aC0R7yYNyIgIGp9YkVl5whgqLr7yhNM7n13sCso"
 
-	auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
+	auth = tweepy.OAuthHandler(consumer_key, consumer_secret, secure=True)
 
 	if data.get('ACCESS_TOKEN'):
 		auth.set_access_token(data["ACCESS_TOKEN"], data["ACCESS_TOKEN_SECRET"])
