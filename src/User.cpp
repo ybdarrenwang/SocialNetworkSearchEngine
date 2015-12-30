@@ -69,8 +69,8 @@ User* User::Instance()
 
 void User::InitUser()
 {
-	cout<<"Enter user name: "<<endl<<"> ";
-	cin>>id;
+    cout<<"Enter user name: "<<endl<<"> ";
+    cin>>id;
     /*
     // < Password masking >
     // Currently there's no need for password; so this function is just for fun

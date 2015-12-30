@@ -8,5 +8,4 @@ This was my final project for grad-school class "Design Pattern and Software Dev
 - Removed Plurk
 
 [Known issues]
-- Enter without content in most situations would freeze.
-- Require previous post at the first post, or next at the last, would freeze.
+- Enter without content in most situations would keep program waiting without hints output, makes it look like freezing.
