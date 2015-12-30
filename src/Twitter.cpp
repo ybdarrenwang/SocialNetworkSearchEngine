@@ -21,11 +21,15 @@ vector<Post*> Twitter::BasicSearch(BasicQuery* q)
 	cout<<"Twitter basic search"<<endl;
 	
 	char sys_call[1024] = {0};
-	sprintf(sys_call, "python ./Twitter/Twitter_Query.py --search --query %s", q->GetKeyword().c_str());
+    string keyword = q->GetKeyword().c_str();
+	if(keyword != "")
+    	sprintf(sys_call, "python ./Twitter/Twitter_Query.py --search --query %s", q->GetKeyword().c_str());
+    else
+    	sprintf(sys_call, "python ./Twitter/Twitter_Query.py --search");
 	system( sys_call );	
 
 	Json::Value root;
-	ifstream fin("POST.json");
+	ifstream fin("log/twitter/posts.json");
 	fin >> root;
 	fin.close();
 
@@ -70,7 +74,7 @@ vector<Post*> Twitter::AdvancedSearch(AdvancedQuery* q)
 	system(sys_call);	
 
 	Json::Value root;
-	ifstream fin("POST.json");
+	ifstream fin("log/twitter/posts.json");
 	fin >> root;
 	fin.close();
 

@@ -5,16 +5,17 @@ from optparse import OptionParser
 	
 consumer_key="2YIdiuX1g8GyCGu0bkl2w"
 consumer_secret="NQm7aC0R7yYNyIgIGp9YkVl5whgqLr7yhNM7n13sCso"
+tmp_folder = "log/twitter"
 
 def userLogin(user_name):
     all_users_auth = {}
     current_auth = {}
     if user_name: # try to load user auth from cache
-        if os.path.isfile('twitter_users.json'):
-            all_users_auth = json.load(open('twitter_users.json'))
+        if os.path.isfile(tmp_folder+'/users.json'):
+            all_users_auth = json.load(open(tmp_folder+'/users.json'))
             if all_users_auth.get(user_name):
                 current_auth = all_users_auth[user_name]
-        open('twitter_current_user.log','w').write(user_name)
+        open(tmp_folder+'/current_user.log','w').write(user_name)
 
     auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
     if not current_auth: # new user, ask for auth and save to cache
@@ -24,13 +25,13 @@ def userLogin(user_name):
         current_auth["ACCESS_TOKEN"] = auth.access_token
         current_auth["ACCESS_TOKEN_SECRET"] = auth.access_token_secret
         all_users_auth[user_name] = current_auth
-        json.dump(all_users_auth, open('twitter_users.json', 'w'))
+        json.dump(all_users_auth, open(tmp_folder+'/users.json', 'w'))
     auth.set_access_token(current_auth["ACCESS_TOKEN"], current_auth["ACCESS_TOKEN_SECRET"])
     return tweepy.API(auth)
 
 def currentUserLogin():
     try:
-        user_name = open('twitter_current_user.log').readline()
+        user_name = open(tmp_folder+'/current_user.log').readline()
         return userLogin(user_name)
     except:
         exit("ERROR: can't find previous user login info")
@@ -96,16 +97,17 @@ def reply(api, tweet_id, text):
     content = '@' + user.author.screen_name + ': '+ unicode(text,'utf8')  
     public_tweets = api.update_status(status=content, in_reply_to_status_id=tweet_id)
 
-#def saveFriendsList(api):
-#    open('FriendsList','w').write('\n'.join([f.screen_name for f in api.friends()]))
+def saveFriendsList(api):
+    open('log/friends.list','w').write('\n'.join([f.screen_name for f in api.friends()]))
 
 def savePosts(posts):
-    open('POST.json', 'w').write(json.dumps(posts))
+    open(tmp_folder+'/posts.json', 'w').write(json.dumps(posts))
 
 if __name__ == '__main__':
     """
     Use cached user as default; override cached user by --login USER_ID
     """
+    os.system('mkdir -p '+tmp_folder)
     parser = OptionParser()
     parser.add_option("--login", dest="login", default=None,
                         help="New user ID to login")
@@ -122,7 +124,7 @@ if __name__ == '__main__':
     (options, args) = parser.parse_args()
     if options.login: # override cached user
         user = userLogin(options.login)
-        #saveFriendsList(user)
+        saveFriendsList(user)
     elif options.search:
         onlySearchMyposts = False
         posts = None

@@ -18,9 +18,9 @@ User::User()
 {
 	// load query history
 	ifstream ifs;
-	ifs.open("queryHistory.log");
+	ifs.open("log/history.log");
 	if(!ifs.good())
-		cerr<<"Warning: can't load query history log"<<endl;
+		cerr<<"Warning: can't load query log/history.log"<<endl;
 	else
 	{
 		string line, keyword, person;
@@ -41,9 +41,9 @@ User::~User()
 {
 	// save query history
 	ofstream ofs;
-	ofs.open("queryHistory.log");
+	ofs.open("log/history.log");
 	if(!ofs.good())
-		cerr<<"Warning: can't save query history log"<<endl;
+		cerr<<"Warning: can't save query log/history.log"<<endl;
 	else
 	{
 		int historySize = 0;
@@ -111,9 +111,9 @@ int User::Login(SocialNet* n)
 	// load friend list from file saved by SocialNet
 	friends.clear();
 	ifstream ifs;
-	ifs.open("FriendsList");
+	ifs.open("log/friends.list");
 	if(!ifs.good())
-		cerr<<"Warning: can't load file FriendsList"<<endl;
+		cerr<<"Warning: can't load friends list"<<endl;
 	else
 	{
 		int i;

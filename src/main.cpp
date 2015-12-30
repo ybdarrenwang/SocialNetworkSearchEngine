@@ -1,6 +1,6 @@
 #include "User.h"
 #include "SocialNet.h"
-#include "Plurk.h"
+//#include "Plurk.h"
 #include "Twitter.h"
 #include "Query.h"
 #include "BasicQuery.h"
@@ -13,13 +13,14 @@
 
 std::map<string, SocialNet*> SocialNet::socialNetManager;
 Twitter Twitter::dummy;
-Plurk Plurk::dummy;
+//Plurk Plurk::dummy;
 User User::instance;
 
 SocialNet* ChooseSocialNet()
 {
 	string socialNetName;
-	cout<<"Choose Social Network (type \"exit\" to quit) (note: only Twitter is functioning): "<<endl<<"> ";
+	//cout<<"Choose Social Network (type \"exit\" to quit) (note: only Twitter is functioning): "<<endl<<"> ";
+	cout<<"Type \"Twitter\" to enter or \"exit\" to quit: "<<endl<<"> ";
 	cin>>socialNetName;
 	if (socialNetName == "exit") return 0;
 	else return SocialNet::Instance(socialNetName);
@@ -28,13 +29,11 @@ SocialNet* ChooseSocialNet()
 Query* ChooseQueryMode(SocialNet* n)
 {
 	int mode = 0;
-
 	while (mode!=1 && mode!=2)
 	{
 		cout<<"Choose query mode (1.Basic, 2.Advanced): "<<endl<<"> ";
 		cin>>mode;
 	}
-
 	if (mode == 1)
 		return new AutoCompleteBasicQ(n);
 //		return new BasicQuery(n);
@@ -47,34 +46,28 @@ int main()
 {
 	User* user = User::Instance();
 	SocialNet* socialNet;
-
 	while(true)
 	{
 		socialNet = ChooseSocialNet();
-
 		if (socialNet != 0)
 		{
 			user->InitUser();
-
 			if (user->Login(socialNet))
 				cout<<"Login failed"<<endl;
 			else
 			{
 				cout<<"Login succeeded"<<endl;
-
 				while (user->WantContinue())
 				{
 					Query* query = ChooseQueryMode(socialNet);
 					user->Search(query);
 					user->InteractWithPosts();
 				}
-
 				user->Logout(socialNet);
 			}
 		}
 		else
 			break;
 	}
-
 	return 0;
 }
