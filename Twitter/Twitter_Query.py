@@ -47,41 +47,25 @@ def getTime(date):
     Time['weekday'] = date.weekday()
     return Time
 
-def getMyTimeline(api):
-    public_tweets = api.home_timeline(count=100)
-    Posts = []
+def getPosts(public_tweets):
+    posts = []
     for tweet in public_tweets:
-        Post = {}
-        Post['user_name'] = tweet.user.screen_name
-        Post['id'] = tweet.id_str
-        Post['content'] = tweet.text
-        Post['time'] = getTime(tweet.created_at)
-        Posts.append(Post)
-    return Posts
+        post = {}
+        post['user_name'] = tweet.author.screen_name
+        post['id'] = tweet.id_str
+        post['content'] = tweet.text
+        post['time'] = getTime(tweet.created_at)
+        posts.append(post)
+    return posts
+
+def getMyTimeline(api):
+    return getPosts(api.home_timeline(count=100))
 
 def getUserTimeline(api, name):
-    public_tweets = api.user_timeline(screen_name=name,count=100)
-    Posts = []
-    for tweet in public_tweets:
-        Post = {}
-        Post['user_name'] = tweet.author.screen_name
-        Post['id'] = tweet.id_str
-        Post['content'] = tweet.text
-        Post['time'] = getTime(tweet.created_at)
-        Posts.append(Post)
-    return Posts
+    return getPosts(api.user_timeline(screen_name=name,count=100))
 
 def queryAll(api, query):
-    public_tweets = api.search(query,{})
-    Posts = []
-    for tweet in public_tweets:
-        Post = {}
-        Post['user_name'] = tweet.author.screen_name
-        Post['id'] = tweet.id_str
-        Post['content'] = tweet.text
-        Post['time'] = getTime(tweet.created_at)
-        Posts.append(Post)
-    return Posts
+    return getPosts(api.search(query,{}))
 
 def queryMyTimeline(api, query):
     return [p for p in getMyTimeline(api) if unicode(query, "utf-8") in p['content']]
