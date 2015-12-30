@@ -6,3 +6,6 @@ This was my final project for grad-school class "Design Pattern and Software Dev
 [2015/12/28]
 - Rewrite Twitter/Twitter_Query.py for new Twitter API; keyword searching is currently unavailable.
 - Will remove Plurk and maybe add Facebook
+
+[2015/12/29]
+- Completely recovered search on Twitter

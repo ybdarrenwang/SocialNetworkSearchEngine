@@ -71,6 +71,9 @@ void User::InitUser()
 {
 	cout<<"Enter user name: "<<endl<<"> ";
 	cin>>id;
+    /*
+    // < Password masking >
+    // Currently there's no need for password; so this function is just for fun
 	cout<<"Enter password: "<<endl<<"> ";
 	cout.flush();
 
@@ -98,7 +101,7 @@ void User::InitUser()
 		}
 	}
 	cout<<endl;
-	cooked();
+	cooked();*/
 }
 
 int User::Login(SocialNet* n)

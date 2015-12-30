@@ -10,7 +10,7 @@ int Twitter::Login(string& id, string& pwd)
 {
 	cout<<"Login Twitter with id="<<id<<endl;
     char sys_call[1024] = {0};
-	sprintf(sys_call, "python ./Twitter/Twitter_Query.py login %s", id.c_str());
+	sprintf(sys_call, "python ./Twitter/Twitter_Query.py --login %s", id.c_str());
 	system( sys_call );	
 	return 0;
 }
@@ -21,7 +21,7 @@ vector<Post*> Twitter::BasicSearch(BasicQuery* q)
 	cout<<"Twitter basic search"<<endl;
 	
 	char sys_call[1024] = {0};
-	sprintf(sys_call, "python ./Twitter/Twitter_Query.py query -r %s", q->GetKeyword().c_str());
+	sprintf(sys_call, "python ./Twitter/Twitter_Query.py --search --query %s", q->GetKeyword().c_str());
 	system( sys_call );	
 
 	Json::Value root;
@@ -59,14 +59,14 @@ vector<Post*> Twitter::AdvancedSearch(AdvancedQuery* q)
 	string keyword = q->GetKeyword();
 	string person = q->GetPerson();
 
-	if(keyword.compare("*") != 0)
-		sprintf(add_opt, "-r %s", keyword.c_str());
-	if(person.compare("*") != 0)
-		sprintf(add_opt, "%s -u %s", add_opt, person.c_str());
+	if(keyword != "")
+		sprintf(add_opt, "--query %s", keyword.c_str());
+	if(person != "")
+		sprintf(add_opt, "%s --user %s", add_opt, person.c_str());
     else
-        sprintf(add_opt, "%s -m", add_opt);
+        sprintf(add_opt, "%s --own", add_opt);
 
-	sprintf(sys_call, "python ./Twitter/Twitter_Query.py query %s", add_opt);
+	sprintf(sys_call, "python ./Twitter/Twitter_Query.py --search %s", add_opt);
 	system(sys_call);	
 
 	Json::Value root;

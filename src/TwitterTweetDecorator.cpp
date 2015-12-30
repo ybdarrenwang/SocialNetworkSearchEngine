@@ -19,7 +19,7 @@ Post* TwitterTweetDecorator::ExecuteOption(string& option, Post* p)
 	if (option == "l")
 	{
 		char sys_call[1024] = {0};
-		sprintf(sys_call, "python ./Twitter/Twitter_Query.py like %s",p->GetID().c_str());
+		sprintf(sys_call, "python ./Twitter/Twitter_Query.py --like %s",p->GetID().c_str());
 		system(sys_call);
 
 		cout<<"You like this post!"<<endl<<"> ";

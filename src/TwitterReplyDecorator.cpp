@@ -27,7 +27,7 @@ Post* TwitterReplyDecorator::ExecuteOption(string& option, Post* p)
 		fout.close();
 
 		char sys_call[1024] = {0};
-		sprintf(sys_call, "python ./Twitter/Twitter_Query.py reply %s", p->GetID().c_str() );	
+		sprintf(sys_call, "python ./Twitter/Twitter_Query.py --reply %s", p->GetID().c_str() );	
         system(sys_call);
         
         cout<<"You replied this post!"<<endl<<"> ";

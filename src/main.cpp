@@ -19,7 +19,7 @@ User User::instance;
 SocialNet* ChooseSocialNet()
 {
 	string socialNetName;
-	cout<<"Choose Social Network (type \"exit\" to quit): "<<endl<<"> ";
+	cout<<"Choose Social Network (type \"exit\" to quit) (note: only Twitter is functioning): "<<endl<<"> ";
 	cin>>socialNetName;
 	if (socialNetName == "exit") return 0;
 	else return SocialNet::Instance(socialNetName);

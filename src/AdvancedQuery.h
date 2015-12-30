@@ -12,9 +12,9 @@ class AdvancedQuery : public Query
 		virtual vector<Post*> Execute() {return receiver->AdvancedSearch(this);}
 		virtual void InitQuery(User*)
 		{
-			cout<<"Enter the keyword you wanna search for (enter * if unlimited): "<<endl<<"> ";
+			cout<<"Enter the keyword you wanna search for (leave empty if unlimited): "<<endl<<"> ";
 			cin>>keyword;
-			cout<<"Enter the person you wanna search for (enter * if unlimited): "<<endl<<"> ";
+			cout<<"Enter the person you wanna search for (leave empty if unlimited): "<<endl<<"> ";
 			cin>>person;
 		}
 };

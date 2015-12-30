@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
 import tweepy
-import sys
-import os
-import json
+import sys, os, json
+from optparse import OptionParser
 	
 consumer_key="2YIdiuX1g8GyCGu0bkl2w"
 consumer_secret="NQm7aC0R7yYNyIgIGp9YkVl5whgqLr7yhNM7n13sCso"
@@ -30,10 +29,11 @@ def userLogin(user_name):
     return tweepy.API(auth)
 
 def currentUserLogin():
-    if os.path.isfile('twitter_current_user.log'):
+    try:
         user_name = open('twitter_current_user.log').readline()
         return userLogin(user_name)
-    return None
+    except:
+        exit("ERROR: can't find previous user login info")
 
 def getTime(date):
     Time = {}
@@ -47,7 +47,6 @@ def getTime(date):
     return Time
 
 def getMyTimeline(api):
-    print 'getMyTimeline'
     public_tweets = api.home_timeline(count=100)
     Posts = []
     for tweet in public_tweets:
@@ -60,7 +59,6 @@ def getMyTimeline(api):
     return Posts
 
 def getUserTimeline(api, name):
-    print 'getUserTimeline'
     public_tweets = api.user_timeline(screen_name=name,count=100)
     Posts = []
     for tweet in public_tweets:
@@ -72,9 +70,8 @@ def getUserTimeline(api, name):
         Posts.append(Post)
     return Posts
 
-def queryAll(api, keyword):
-    print 'queryAll'
-    public_tweets = api.search(keyword,{})
+def queryAll(api, query):
+    public_tweets = api.search(query,{})
     Posts = []
     for tweet in public_tweets:
         Post = {}
@@ -85,13 +82,11 @@ def queryAll(api, keyword):
         Posts.append(Post)
     return Posts
 
-def queryMyTimeline(api, keyword):
-    print 'queryMy'
-    return [p for p in getMyTimeline(api) if unicode(keyword, "utf-8") in p['content']]
+def queryMyTimeline(api, query):
+    return [p for p in getMyTimeline(api) if unicode(query, "utf-8") in p['content']]
 
-def queryUserTimeline(api, user_name, keyword):
-    print 'queryUser'
-    return [p for p in getUserTimeline(api, user_name) if unicode(keyword, "utf-8") in p['content']]
+def queryUserTimeline(api, user_name, query):
+    return [p for p in getUserTimeline(api, user_name) if unicode(query, "utf-8") in p['content']]
 
 def favorite(api, tweet_id):
     return api.create_favorite(tweet_id)
@@ -101,47 +96,53 @@ def reply(api, tweet_id, text):
     content = '@' + user.author.screen_name + ': '+ unicode(text,'utf8')  
     public_tweets = api.update_status(status=content, in_reply_to_status_id=tweet_id)
 
-def saveFriendsList(api):
-    open('FriendsList','w').write('\n'.join([f.screen_name for f in api.friends()]))
+#def saveFriendsList(api):
+#    open('FriendsList','w').write('\n'.join([f.screen_name for f in api.friends()]))
 
 def savePosts(posts):
     open('POST.json', 'w').write(json.dumps(posts))
 
 if __name__ == '__main__':
-    api = currentUserLogin()
-    argc = len (sys.argv)
-    if argc == 1: #do normal get time line
-        savePosts(getTimeline(api))
-    if argc > 2:
-        i = 2
-        if cmp(sys.argv[1], 'query') == 0:
-            onlySearchMyPosts = False
-            while i < argc:
-                if sys.argv[i] == '-r':
-                    i += 1
-                    keyword = sys.argv[i]
-                elif sys.argv[i] == '-u':
-                    i += 1
-                    user = sys.argv[i]
-                elif sys.argv[i] == '-m':
-                    onlySearchMyPosts = True
-                i += 1
-            if 'user' in locals():
-                if 'request' in locals():
-                    Posts = queryUserTimeline(api, user, keyword)
-                else:
-                    Posts = getUserTimeline(api, user)
-            elif 'request' in locals():
-                if onlySearchMyPosts:
-                    Posts = queryMyTimeline(api, keyword)
-                else:
-                    Posts = queryAll(api, keyword)
-            elif onlySearchMyPosts:
-                Posts = getMyTimeline(api)
-            savePosts(Posts)
-        elif cmp(sys.argv[1] , 'reply') == 0:
-            reply(api, sys.argv[2], open('reply', 'r').read())
-        elif cmp(sys.argv[1], 'like') == 0:
-            favorite(api, sys.argv[2])
-        elif cmp(sys.argv[1], 'login') == 0:
-            saveFriendsList(userLogin(sys.argv[2]))
+    """
+    Use cached user as default; override cached user by --login USER_ID
+    """
+    parser = OptionParser()
+    parser.add_option("--login", dest="login", default=None,
+                        help="New user ID to login")
+    parser.add_option("--search", dest="search", action="store_true", default=False,
+                        help="Search with --query, --user or --own")
+    parser.add_option("--query", dest="query", default=None, help="The query to search")
+    parser.add_option("--user", dest="user", default=None, help="The user ID to search")
+    parser.add_option("--own", dest="onlySearchMyposts", action="store_true", default=False,
+                        help="Limit search to current user's posts")
+    parser.add_option("--reply", dest="reply", default=None,
+                        help="Reply the post")
+    parser.add_option("--like", dest="like", default=None,
+                        help="Like the post")
+    (options, args) = parser.parse_args()
+    if options.login: # override cached user
+        user = userLogin(options.login)
+        #saveFriendsList(user)
+    elif options.search:
+        onlySearchMyposts = False
+        posts = None
+        if options.user:
+            if options.query:
+                posts = queryUserTimeline(currentUserLogin(), options.user, options.query)
+            else:
+                posts = getUserTimeline(currentUserLogin(), options.user)
+        elif options.query:
+            if options.onlySearchMyposts:
+                posts = queryMyTimeline(currentUserLogin(), options.query)
+            else:
+                posts = queryAll(currentUserLogin(), options.query)
+        elif options.onlySearchMyposts: 
+            posts = getMyTimeline(currentUserLogin())
+        savePosts(posts)
+    elif options.reply:
+        reply(currentUserLogin(), options.reply, open('reply', 'r').read())
+    elif options.like:
+        favorite(currentUserLogin(), options.like)
+    else:
+        posts = getMyTimeline(currentUserLogin())
+        savePosts(posts)

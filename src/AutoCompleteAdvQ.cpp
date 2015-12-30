@@ -42,7 +42,7 @@ void AutoCompleteAdvQ::InitQuery(User* user)
 	vector<string>::iterator autoListIterator;
 	
 	// auto-complete keyword
-	cout<<"Enter the keyword you wanna search for: "<<endl<<"(Enter * if unlimited; Press Tab to auto-complete)"<<endl<<"> ";
+	cout<<"Enter the keyword you wanna search for: "<<endl<<"(Leave empty if unlimited; Press Tab to auto-complete)"<<endl<<"> ";
 	cout.flush();
 
 	raw();
@@ -98,7 +98,7 @@ void AutoCompleteAdvQ::InitQuery(User* user)
 	SetKeyword(keyword);
 
 	// auto-complete person
-	cout<<"Enter the person you wanna search for: "<<endl<<"(Enter * if unlimited; Press Tab to auto-complete)"<<endl<<"> ";
+	cout<<"Enter the person you wanna search for: "<<endl<<"(Leave empty if unlimited; Press Tab to auto-complete)"<<endl<<"> ";
 	cout.flush();
 
 	raw();
