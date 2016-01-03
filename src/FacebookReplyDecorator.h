@@ -1,14 +1,14 @@
-#ifndef PLURKREPLYDECORATOR_H
-#define PLURKREPLYDECORATOR_H
+#ifndef FACEBOOKREPLYDECORATOR_H
+#define FACEBOOKREPLYDECORATOR_H
 
 #include "PostDecorator.h"
 #include <stdio.h>
 #include <fstream>
 
-class PlurkReplyDecorator : public PostDecorator
+class FacebookReplyDecorator : public PostDecorator
 {
 	public:
-		PlurkReplyDecorator(Post* p):PostDecorator(p){}
+		FacebookReplyDecorator(Post* p):PostDecorator(p){}
 		void PrintContent(ostream&);
 		void PrintOption(ostream&);
 		Post* ExecuteOption(string&, Post*);

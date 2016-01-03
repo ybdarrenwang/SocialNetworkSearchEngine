@@ -132,7 +132,7 @@ if __name__ == '__main__':
             posts = getMyTimeline(currentUserLogin())
         savePosts(posts)
     elif options.reply:
-        reply(currentUserLogin(), options.reply, open('reply', 'r').read())
+        reply(currentUserLogin(), options.reply, open('log/twitter/reply.txt', 'r').read())
     elif options.like:
         favorite(currentUserLogin(), options.like)
     else:

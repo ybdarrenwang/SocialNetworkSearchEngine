@@ -1,19 +1,19 @@
-#include "TwitterReplyDecorator.h"
+#include "FacebookReplyDecorator.h"
 #include <stdio.h>
 #include <stdlib.h>
 
-void TwitterReplyDecorator::PrintContent(ostream& os)
+void FacebookReplyDecorator::PrintContent(ostream& os)
 {
 	PostDecorator::PrintContent(os);
 }
 
-void TwitterReplyDecorator::PrintOption(ostream& os)
+void FacebookReplyDecorator::PrintOption(ostream& os)
 {
 	os<<"- Reply this post [r]"<<endl;
 	PostDecorator::PrintOption(os);
 }
 
-Post* TwitterReplyDecorator::ExecuteOption(string& option, Post* p)
+Post* FacebookReplyDecorator::ExecuteOption(string& option, Post* p)
 {
 	if (option == "r")
 	{
@@ -22,12 +22,12 @@ Post* TwitterReplyDecorator::ExecuteOption(string& option, Post* p)
 		getchar();
 		getline(cin, content);
 		
-		ofstream fout("log/twitter/reply.txt");
+		ofstream fout("log/facebook/reply.txt");
 		fout << content;
 		fout.close();
 
 		char sys_call[1024] = {0};
-		sprintf(sys_call, "python ./Twitter/Twitter_Query.py --reply %s", p->GetID().c_str() );	
+		sprintf(sys_call, "python ./Facebook/Facebook_Query.py --reply %s", p->GetID().c_str() );	
         system(sys_call);
         
         cout<<"You replied this post!"<<endl<<"> ";

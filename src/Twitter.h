@@ -10,6 +10,7 @@
 #include "AdvancedQuery.h"
 #include <stdio.h>
 #include <fstream>
+
 class Twitter : public SocialNet
 {
 	public:

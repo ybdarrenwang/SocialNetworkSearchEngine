@@ -46,5 +46,4 @@ void Message::SetMessage(Json::Value &root)
 	createTime.SetMinute(root["time"]["minute"].asInt());
 	createTime.SetSecond(root["time"]["second"].asInt());
 	createTime.SetWeektime(root["time"]["week_day"].asString());
-
 }

@@ -291,7 +291,6 @@ class GraphAPI(object):
                 args["access_token"] = self.access_token
         post_data = None if post_args is None else urllib.urlencode(post_args)
         try:
-            print ("https://graph.facebook.com/" + path + "?" + urllib.urlencode(args))
             file = urllib2.urlopen("https://graph.facebook.com/" + path + "?" +
                     urllib.urlencode(args), post_data, timeout=self.timeout)
         except urllib2.HTTPError, e:

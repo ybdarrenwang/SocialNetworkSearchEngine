@@ -1,6 +1,6 @@
 #include "User.h"
 #include "SocialNet.h"
-//#include "Plurk.h"
+#include "Facebook.h"
 #include "Twitter.h"
 #include "Query.h"
 #include "BasicQuery.h"
@@ -13,14 +13,13 @@
 
 std::map<string, SocialNet*> SocialNet::socialNetManager;
 Twitter Twitter::dummy;
-//Plurk Plurk::dummy;
+Facebook Facebook::dummy;
 User User::instance;
 
 SocialNet* ChooseSocialNet()
 {
 	string socialNetName;
-	//cout<<"Choose Social Network (type \"exit\" to quit) (note: only Twitter is functioning): "<<endl<<"> ";
-	cout<<"Type \"Twitter\" to enter or \"exit\" to quit: "<<endl<<"> ";
+	cout<<"Enter \"Facebook\" or \"Twitter\" to begin, or \"exit\" to quit: "<<endl<<"> ";
 	cin>>socialNetName;
 	if (socialNetName == "exit") return 0;
 	else return SocialNet::Instance(socialNetName);

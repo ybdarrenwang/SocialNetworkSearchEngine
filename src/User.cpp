@@ -1,6 +1,4 @@
 #include "User.h"
-#include "PlurkPuDecorator.h"
-#include "PlurkReplyDecorator.h"
 #include "myGetch.h"
 #include <fstream>
 #include <iostream>

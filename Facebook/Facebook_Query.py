@@ -9,7 +9,7 @@ sys.setdefaultencoding('utf8')
 
 app_id       = '1226220920740227'
 app_secret   = '24f99662865dd4302974a4d1ee8f5ce2'
-perms        = ['user_friends','manage_pages','publish_pages','user_posts']
+perms        = ['user_friends','user_posts','publish_actions']
 redirect_uri = "https://www.facebook.com/"
 tmp_folder = "log/facebook"
 
@@ -28,7 +28,7 @@ def userLogin(user_name):
 
     if not current_auth: # new user, ask for auth and save to cache
         print facebook.auth_url(app_id, redirect_uri, perms)
-        code = str(raw_input("Please copy and paste the verification number following \"https://www.facebook.com/?code=\": "))
+        code = str(raw_input("Please copy and paste the verification number following https://www.facebook.com/?code= "))
         access_token = facebook.get_access_token_from_code(code, redirect_uri, app_id, app_secret)["access_token"]
         current_auth["ACCESS_TOKEN"] = access_token
         all_users_auth[user_name] = current_auth
@@ -42,25 +42,38 @@ def currentUserLogin():
     except:
         exit("ERROR: Can't find user login info. Please login with --login [USERNAME].")
 
-def processPosts(my_posts):
-    for post in my_posts:
-        if 'message' not in post:
-            post['message'] = ''
-        if 'story' not in post:
-            post['story'] = ''
-    return my_posts
+def getTime(date):
+    token = date.split('T')
+    Time = {}
+    [Time['year'], Time['month'], Time['day']] = [int(x) for x in token[0].split('-')]
+    [Time['hour'], Time['minute'], Time['second']] = [int(x) for x in token[1].split('+')[0].split(':')]
+    Time['weekday'] = -1
+    return Time
+
+def getPosts(my_posts):
+    posts = []
+    for p in my_posts:
+        post = {}
+        post['user_name'] = ''
+        post['id'] = p['id']
+        if 'message' not in p: p['message'] = ''
+        if 'story' not in p: p['story'] = ''
+        post['content'] = '%s\n%s' % (p['message'], p['story'])
+        post['time'] = getTime(p['created_time'])
+        posts.append(post)
+    return posts
 
 def getMyTimeline(api):
-    return processPosts(api.get_object('me/feed')['data'])
+    return getPosts(api.get_object('me/feed')['data'])
 
 def getUserTimeline(api, name):
-    return [p for p in getMyTimeline(api) if unicode(name, "utf-8") in p['message'] or unicode(name, "utf-8") in p['story']]
+    return [p for p in getMyTimeline(api) if unicode(name, "utf-8") in p['content']]
 
 def queryMyTimeline(api, query):
-    return [p for p in getMyTimeline(api) if unicode(query, "utf-8") in p['message'] or unicode(query, "utf-8") in p['story']]
+    return [p for p in getMyTimeline(api) if unicode(query, "utf-8") in p['content']]
 
 def queryUserTimeline(api, user_name, query):
-    return [p for p in getUserTimeline(api, user_name) if unicode(query, "utf-8") in p['message'] or unicode(query, "utf-8") in p['story']]
+    return [p for p in getUserTimeline(api, user_name) if unicode(query, "utf-8") in p['content']]
 
 def favorite(api, post_id):
     api.put_like(post_id)
@@ -105,7 +118,7 @@ if __name__ == '__main__':
             posts = getMyTimeline(currentUserLogin())
         savePosts(posts)
     elif options.reply:
-        reply(currentUserLogin(), options.reply, open('reply', 'r').read())
+        reply(currentUserLogin(), options.reply, open('log/facebook/reply.txt', 'r').read())
     elif options.like:
         favorite(currentUserLogin(), options.like)
     else:
