@@ -9,7 +9,7 @@ DOXYGENCFG = $(DOC)/doxygen.cfg
 
 CDIR = cd
 MKDIR = mkdir -p
-RM = rm -f
+RM = rm -rf
 
 objects = $(BUILD)/main.o $(BUILD)/SocialNet.o $(BUILD)/User.o $(BUILD)/Message.o $(BUILD)/Photo.o $(BUILD)/FacebookLikeDecorator.o $(BUILD)/FacebookReplyDecorator.o $(BUILD)/TwitterReplyDecorator.o $(BUILD)/TwitterTweetDecorator.o $(BUILD)/json.o $(BUILD)/Facebook.o $(BUILD)/Twitter.o $(BUILD)/AutoCompleteBasicQ.o $(BUILD)/AutoCompleteAdvQ.o
 
@@ -33,4 +33,4 @@ doc:
 
 .PHONY : clean
 clean:
-	$(RM) $(BUILD)/*
+	$(RM) $(BUILD)

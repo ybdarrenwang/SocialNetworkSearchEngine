@@ -2,6 +2,21 @@ Social Network Search Engine
 ============================
 Keyword/friend search, browse search results, like and reply on Facebook and Twitter.
 
+Platforms
+---------
+Linux, OS X
+
+Requirements
+------------
+- g++ 4.2 or higher
+- Python 2.6 or higher
+- Doxygen (for make doc)
+
+Installation
+------------
+1. Execute "make" or "make all" to create SocialNetworkSearchEngine.exe
+2. Execute "make doc" to create HTML pages explaining code structure (NOTE: Doxygen needed)
+
 Release Notes
 -------------
 
