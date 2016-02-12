@@ -39,5 +39,5 @@ ____________
 
 Known issues
 ------------
-- doc/manual.pdf not yet updated
+- Not yet updated manual to latest version
 - Enter without content in most situations would keep program waiting without hints output, makes it look like freezing.
