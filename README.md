@@ -10,12 +10,14 @@ Requirements
 ------------
 - g++ 4.2 or higher
 - Python 2.6 or higher
-- Doxygen (for make doc)
+- pdflatex (for make doc)
+- Doxygen (for make doxygen)
 
 Installation
 ------------
 1. Execute "make" or "make all" to create SocialNetworkSearchEngine.exe
-2. Execute "make doc" to create HTML pages explaining code structure (NOTE: Doxygen needed)
+6. Execute "make doc" to compile PDF manual (NOTE: pdflatex needed)
+7. Execute "make doxygen" to create HTML pages explaining code structure (NOTE: Doxygen needed)
 
 Release Notes
 -------------

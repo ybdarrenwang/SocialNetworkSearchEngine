@@ -28,6 +28,10 @@ $(BUILD)/%.o: $(SRC)/%.cpp
 
 .PHONY : doc
 doc:
+	pdflatex -output-directory=${DOC} $(DOC)/manual; pdflatex -output-directory=${DOC} $(DOC)/manual
+
+.PHONY : doxygen
+doxygen:
 	$(CDIR) $(DOC);
 	$(DOXYGEN) $(DOXYGENCFG)
 
