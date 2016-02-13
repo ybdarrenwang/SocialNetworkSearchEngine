@@ -25,24 +25,28 @@ Quick Start
 
 ####`Preparation`
 
-The folders "Plurk" and "Twitter" contains python scripts that will be called. Therefore to run this program, the folders "Plurk" and "Twitter" must be in the same directory.
+The folders `Facebook` and `Twitter` contain python scripts that will be called by the executable. Therefore to run this program, the folders "Facebook" and "Twitter" must be under the same directory.
 
-We use the following Python libraries for Social Network API:
-- Plurk: plurk-oauth by clsung, available at http://www.plurk.com/API
-- Twitter: tweepy by joshthecoder, available at https://dev.twitter.com/docs/api
+We use the following Python libraries for Dialog OAuth API:
+- Facebook: Facebook Graph API, available at https://github.com/pythonforfacebook/facebook-sdk
+- Twitter: Tweepy by joshthecoder, available at https://dev.twitter.com/docs/api
 
 ####`Login`
 
-This program adopts interactive command line interface. For the first execution of {\it SocialNetworkSearchEngine.exe} you will see the messages below:
-
+This program adopts interactive command line interface. After execution of `SocialNetworkSearchEngine.exe` you will see the messages below:
 ```
 Initializing Twitter
-Initializing Plurk
-Warning: can't load query history log
-Choose Social Network (type "exit" to quit):
+Initializing Facebook
+Warning: can't load query log/history.log
+Enter "Facebook" or "Twitter" to begin, or "exit" to quit:
 ```
+Just type "Facebook" If you want to login Facebook (the initial must be upper case!) and press enter, then type in your ID. If this is your first login with this program, you should see the prompt message requiring your authorization through Dialog OAuth.
 
-Just type "Plurk" If you want to login Plurk (the initial must be upper case!) and press enter. Then you can input your id and password. If this is your first login with this program, after entering ID and password you will see something like this:
+```
+Login Facebook with id=......
+https://www.facebook.com/dialog/oauth?scope=user_friends%2Cuser_posts%2Cpublish_actions&redirect_uri=https%3A%2F%2Fwww.facebook.com%2F&client_id=......
+Please copy and paste the verification number following https://www.facebook.com/?code=
+```
 
 ```
 Open the following URL and authorize it
@@ -50,7 +54,7 @@ http://www.plurk.com/OAuth/authorize?oauth\_token=......
 Input the verification number: 
 ```
 
-Browse the authentication webpage to get the verification number. This procedure will run twice to get required access token, and the program would store the access token in the file "API\_plurk\_all.keys" and "API\_twitter.keys" in current directory.
+Browse the authentication webpage to get the verification number.
 
 ####`Search`
 
@@ -94,7 +98,8 @@ Just enter the option in the bracket to execute.
 
 To terminate the program, just type "exit" when you are not logged in any social network.
 
-####`System framework and design patterns`
+System framework and design patterns
+------------------------------------
 
 ![patterns](https://github.com/piscesfantasy/SocialNetworkSearchEngine/blob/master/doc/classDiagram.png)
 
