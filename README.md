@@ -8,13 +8,13 @@ Linux, OS X
 
 Requirements
 ------------
-- g++ 4.2 or higher
-- Python 2.6 or higher
+* g++ 4.2 or higher
+* Python 2.6 or higher
   * Note: need `Requests` module for Twitter's API
-    - On Linux: `sudo pip install requests` (if you have pip installed)
-    - On OS X: `sudo easy_install -U requests` (if you have easy\_install installed)
-- pdflatex (for make doc)
-- Doxygen (for make doxygen)
+    * On Linux: `sudo pip install requests` (if you have pip installed)
+    * On OS X: `sudo easy_install -U requests` (if you have easy\_install installed)
+* pdflatex (for make doc)
+* Doxygen (for make doxygen)
 
 Installation
 ------------
@@ -31,8 +31,8 @@ Quick Start
 The folders `Facebook` and `Twitter` contain python scripts that will be called by the executable. Therefore to run this program, the folders "Facebook" and "Twitter" must be under the same directory.
 
 We use the following Python libraries for Dialog OAuth API:
-- Facebook: Facebook Graph API, available at https://github.com/pythonforfacebook/facebook-sdk
-- Twitter: Tweepy by joshthecoder, available at https://github.com/tweepy/tweepy
+* Facebook: Facebook Graph API, available at https://github.com/pythonforfacebook/facebook-sdk
+* Twitter: Tweepy by joshthecoder, available at https://github.com/tweepy/tweepy
 
 ####`Login`
 
