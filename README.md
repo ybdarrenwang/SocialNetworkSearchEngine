@@ -10,6 +10,9 @@ Requirements
 ------------
 - g++ 4.2 or higher
 - Python 2.6 or higher
+..* Note: need `Requests` module for Twitter's API
+..- On Linux: `sudo pip install requests` (if you have pip installed)
+..- On OS X: `sudo easy_install -U requests` (if you have easy\_install installed)
 - pdflatex (for make doc)
 - Doxygen (for make doxygen)
 
@@ -29,7 +32,7 @@ The folders `Facebook` and `Twitter` contain python scripts that will be called 
 
 We use the following Python libraries for Dialog OAuth API:
 - Facebook: Facebook Graph API, available at https://github.com/pythonforfacebook/facebook-sdk
-- Twitter: Tweepy by joshthecoder, available at https://dev.twitter.com/docs/api
+- Twitter: Tweepy by joshthecoder, available at https://github.com/tweepy/tweepy
 
 ####`Login`
 
@@ -51,18 +54,18 @@ Please copy and paste the verification number following https://www.facebook.com
 1. Open the url with browser;
 2. Allow the permissions;
 3. You should be redirected to url `https://www.facebook.com/?code=[VERIFICATION NUMBER]`;
-4. Copy the `[VERIFICATION NUMBER]` part in url, paste it under this message, and press enter.
+4. Copy the `[VERIFICATION NUMBER]` part in url, paste it after this message, and press enter.
 
 For Twitter, the message looks like below:
 ```
-Open the following URL and authorize it
-http://www.plurk.com/OAuth/authorize?oauth\_token=......
-Input the verification number: 
+Login Twitter with id=......
+https://api.twitter.com/oauth/authorize?oauth_token=......
+Please input the verification number:
 ```
 1. Open the url with browser;
 2. Allow the permissions;
 3. You should be redirected to a webpage with verification number in the middle;
-4. Enter the verification number under this message.
+4. Enter the verification number after this message. (warning: don't copy and paste!)
 
 ####`Search`
 
@@ -78,8 +81,8 @@ Choose query mode (1.Basic, 2.Advanced):
 ```
 1. Basic Search: Search over all posts on your wall (Facebook) or all tweets (Twitter) with a keyword.
 2. Advanced Search:
-- Twitter: can assign a friend's ID, and then search over all of his/her messages of with a keyword.
-- Facebook: becasue Facebook API does not allow to retrieve posts on friends' walls, therefore search friend by [NAME] is identical to search keyword [NAME] on your own wall.
+..- Twitter: can assign a friend's ID, and then search over all of his/her messages of with a keyword.
+..- Facebook: becasue Facebook API does not allow to retrieve posts on friends' walls, therefore search friend by [NAME] is identical to search keyword [NAME] on your own wall.
 
 ####`Auto-complete`
 
