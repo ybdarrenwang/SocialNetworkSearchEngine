@@ -13,15 +13,13 @@ Requirements
   * Note: need `Requests` module for Twitter's API
     * On Linux: `sudo pip install requests` (if you have pip installed)
     * On OS X: `sudo easy_install -U requests` (if you have easy\_install installed)
-* pdflatex (for make doc)
 * Doxygen (for make doxygen)
 
 Installation
 ------------
 1. Execute "make" or "make all" to create SocialNetworkSearchEngine.exe.
 2. Execute "make clean" to remove build/ folder entirely.
-3. Execute "make doc" to compile PDF manual (NOTE: pdflatex needed).
-4. Execute "make doxygen" to create HTML pages explaining code structure (NOTE: Doxygen needed).
+3. Execute "make doxygen" to create HTML pages explaining code structure (NOTE: Doxygen needed).
 
 Quick Start
 -----------

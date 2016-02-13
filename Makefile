@@ -26,10 +26,6 @@ program: $(objects)
 $(BUILD)/%.o: $(SRC)/%.cpp
 	$(GPP) -c -o $@ $<
 
-.PHONY : doc
-doc:
-	pdflatex -output-directory=${DOC} $(DOC)/manual; pdflatex -output-directory=${DOC} $(DOC)/manual
-
 .PHONY : doxygen
 doxygen:
 	$(CDIR) $(DOC);
