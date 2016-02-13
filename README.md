@@ -115,10 +115,13 @@ System framework and design patterns
 
 ![patterns](https://github.com/piscesfantasy/SocialNetworkSearchEngine/blob/master/doc/classDiagram.png)
 
-1. class User: Singleton
-2. class SocialNet: Singleton + Prototype Manager + Abstract Factory
-3. class Query: Command + Template Method
-4. class Post: Decorator 
+####`class User: Singleton`
+
+####`class SocialNet: Singleton + Prototype Manager + Abstract Factory`
+
+####`class Query: Command + Template Method`
+
+####`class Post: Decorator`
 
 Release Notes
 -------------
@@ -140,5 +143,4 @@ ____________
 
 Known issues
 ------------
-- Not yet updated manual to latest version
 - Enter without content in most situations would keep program waiting without hints output, makes it look like freezing.
