@@ -83,7 +83,7 @@ Choose query mode (1.Basic, 2.Advanced):
 
 ####`Auto-complete`
 
-While entering either keyword or a friend's ID, this program also support auto-complete. For keyword the program will search and iterate through your most recent 100 queries stored in the file "queryHistory.log" in current folder; and for friend's ID the program will search and iterate through your friend lis stored in the file "FriendsList" in current folder. 
+While entering either keyword or a friend's ID, this program also support auto-complete. For keyword the program will search and iterate through your most recent 100 queries stored in the file `./log/history.log`; and for friend's ID the program will search and iterate through your friend lis stored in the file `./log/friends.list`.
 
 Yet for now this function is normal only for English words. There may be some unexpected error if you try to auto-complete non-English words.
 
