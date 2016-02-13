@@ -96,12 +96,7 @@ To terminate the program, just type "exit" when you are not logged in any social
 
 ####`System framework and design patterns`
 
-\begin{figure}[t]
-\centering
-\includegraphics[width=15cm]{doc/classDiagram}
-\caption{{\it The framework of our program}}
-\label{fig:classDiagram}
-\end{figure}
+![patterns](https://github.com/piscesfantasy/SocialNetworkSearchEngine/blob/master/doc/classDiagram.png)
 
 1. class User: Singleton
 2. class SocialNet: Singleton + Prototype Manager + Abstract Factory
