@@ -11,8 +11,8 @@ Requirements
 - g++ 4.2 or higher
 - Python 2.6 or higher
   * Note: need `Requests` module for Twitter's API
-  - On Linux: `sudo pip install requests` (if you have pip installed)
-  - On OS X: `sudo easy_install -U requests` (if you have easy\_install installed)
+    - On Linux: `sudo pip install requests` (if you have pip installed)
+    - On OS X: `sudo easy_install -U requests` (if you have easy\_install installed)
 - pdflatex (for make doc)
 - Doxygen (for make doxygen)
 
@@ -81,8 +81,8 @@ Choose query mode (1.Basic, 2.Advanced):
 ```
 1. Basic Search: Search over all posts on your wall (Facebook) or all tweets (Twitter) with a keyword.
 2. Advanced Search:
-  * Twitter: can assign a friend's ID, and then search over all of his/her messages of with a keyword.
   * Facebook: becasue Facebook API does not allow to retrieve posts on friends' walls, therefore search friend by [NAME] is identical to search keyword [NAME] on your own wall.
+  * Twitter: can assign a friend's ID, and then search over all of his/her messages of with a keyword.
 
 ####`Auto-complete`
 
