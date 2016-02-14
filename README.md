@@ -113,14 +113,6 @@ System framework and design patterns
 
 ![patterns](https://github.com/piscesfantasy/SocialNetworkSearchEngine/blob/master/doc/classDiagram.png)
 
-####`class User: Singleton`
-
-####`class SocialNet: Singleton + Prototype Manager + Abstract Factory`
-
-####`class Query: Command + Template Method`
-
-####`class Post: Decorator`
-
 Release Notes
 -------------
 
