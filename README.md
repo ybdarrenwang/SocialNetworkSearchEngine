@@ -17,9 +17,9 @@ Requirements
 
 Installation
 ------------
-1. Execute "make" or "make all" to create SocialNetworkSearchEngine.exe.
-2. Execute "make clean" to remove build/ folder entirely.
-3. Execute "make doxygen" to create HTML pages explaining code structure (NOTE: Doxygen needed).
+1. `make` or `make all` to create SocialNetworkSearchEngine.exe.
+2. `make clean` to remove build/ folder entirely.
+3. `make doxygen` to create HTML pages explaining code structure (NOTE: Doxygen needed).
 
 Quick Start
 -----------
