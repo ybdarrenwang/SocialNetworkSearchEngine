@@ -35,10 +35,10 @@ We use the following Python libraries for Dialog OAuth API:
 You need to create your own Facebook or Twitter app by yourself:
 * Facebook: https://developers.facebook.com/apps/
 * Twitter: https://apps.twitter.com/
-After getting the app ID (public key) and secret key (private key), update the variables `app_id` and `app_secret` in:
+
+After getting the app ID (public key) and secret key (private key), update the variables `app_id` and `app_secret` respectively in:
 * `Facebook/Facebook_Query.py`
 * `Twitter/Twitter_Query.py`
-respectively.
 
 ### Login
 
