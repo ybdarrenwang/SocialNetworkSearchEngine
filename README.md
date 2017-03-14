@@ -24,7 +24,7 @@ Installation
 Quick Start
 -----------
 
-####`Preparation`
+### Preparation
 
 The folders `Facebook` and `Twitter` contain python scripts that will be called by the executable. Therefore to run this program, the folders "Facebook" and "Twitter" must be under the same directory.
 
@@ -32,7 +32,15 @@ We use the following Python libraries for Dialog OAuth API:
 * Facebook: Facebook Graph API, available at https://github.com/pythonforfacebook/facebook-sdk
 * Twitter: Tweepy by joshthecoder, available at https://github.com/tweepy/tweepy
 
-####`Login`
+You need to create your own Facebook or Twitter app by yourself:
+* Facebook: https://developers.facebook.com/apps/
+* Twitter: https://apps.twitter.com/
+After getting the app ID (public key) and secret key (private key), update the variables `app_id` and `app_secret` in:
+* `Facebook/Facebook_Query.py`
+* `Twitter/Twitter_Query.py`
+respectively.
+
+### Login
 
 This program adopts interactive command line interface. After execution of `SocialNetworkSearchEngine.exe` you will see the messages below:
 ```
@@ -65,7 +73,7 @@ Please input the verification number:
 3. You should be redirected to a webpage with verification number in the middle;
 4. Enter the verification number after this message. (warning: don't copy and paste!)
 
-####`Search`
+###Search
 
 After logging in you should see the message:
 ```
@@ -82,13 +90,13 @@ Choose query mode (1.Basic, 2.Advanced):
   * Facebook: becasue Facebook API does not allow to retrieve posts on friends' walls, therefore search friend by [NAME] is identical to search keyword [NAME] on your own wall.
   * Twitter: can assign a friend's ID, and then search over all of his/her messages of with a keyword.
 
-####`Auto-complete`
+###Auto-complete
 
 While entering either keyword or a friend's ID, this program also support auto-complete. For keyword the program will search and iterate through your most recent 100 queries stored in the file `./log/history.log`; and for friend's ID the program will search and iterate through your friend lis stored in the file `./log/friends.list`.
 
 Yet for now this function is normal only for English words. There may be some unexpected error if you try to auto-complete non-English words.
 
-####`Interact with posts`
+###Interact with posts
 
 Take `Basic Search` on `Facebook` as example. After entering your query, the program will retrieve relevant posts and store them in the file `./log/facebook/posts.json`. The first post will be shown on the screen followed by some options:
 ```
@@ -104,7 +112,7 @@ If you are browsing posts except the first one, the option will also includes:
 ```
 Just enter the option in the bracket to execute.
 
-####`Terminate`
+###Terminate
 
 Enter `exit` when you are not logged in any social network.
 

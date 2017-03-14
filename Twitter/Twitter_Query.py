@@ -7,8 +7,8 @@ from optparse import OptionParser
 reload(sys)  
 sys.setdefaultencoding('utf8')
 	
-consumer_key="2YIdiuX1g8GyCGu0bkl2w"
-consumer_secret="NQm7aC0R7yYNyIgIGp9YkVl5whgqLr7yhNM7n13sCso"
+app_id = ''
+app_secret = ''
 tmp_folder = "log/twitter"
 
 def userLogin(user_name):
@@ -24,7 +24,7 @@ def userLogin(user_name):
     else:
         exit("ERROR: Please login with --login [USERNAME].")
 
-    auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
+    auth = tweepy.OAuthHandler(app_id, app_secret)
     if not current_auth: # new user, ask for auth and save to cache
         print auth.get_authorization_url()
         verification_num = str(input("Please input the verification number: "))

@@ -7,8 +7,8 @@ from optparse import OptionParser
 reload(sys)  
 sys.setdefaultencoding('utf8')
 
-app_id       = '1226220920740227'
-app_secret   = '24f99662865dd4302974a4d1ee8f5ce2'
+app_id       = ''
+app_secret   = ''
 perms        = ['user_friends','user_posts','publish_actions']
 redirect_uri = "https://www.facebook.com/"
 tmp_folder = "log/facebook"
